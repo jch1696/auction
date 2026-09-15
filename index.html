@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>경매</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-title" content="경매">
+<meta name="theme-color" content="#c62828">
+<style>
+  html,body{margin:0;height:100%;background:#c62828;color:#fff;font-family:system-ui,sans-serif;
+    display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px}
+  img{width:96px;height:96px;border-radius:20px}
+  a{color:#fff}
+</style>
+</head>
+<body>
+<img src="icon-192.png" alt="">
+<div>경매 대시보드로 이동 중…</div>
+<a id="go" href="https://houserent-ya8veotkxyx7wdgizq8qom.streamlit.app/?m=1">바로 열기</a>
+<script>setTimeout(function(){ location.replace(document.getElementById('go').href); }, 400);</script>
+</body>
+</html>
