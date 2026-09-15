@@ -11,15 +11,20 @@
 <meta name="theme-color" content="#c62828">
 <style>
   html,body{margin:0;height:100%;background:#c62828;color:#fff;font-family:system-ui,sans-serif;
-    display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px}
+    display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;text-align:center;padding:24px;box-sizing:border-box}
   img{width:96px;height:96px;border-radius:20px}
-  a{color:#fff}
+  .btn{display:block;background:#fff;color:#c62828;font-weight:700;font-size:20px;padding:16px 36px;border-radius:14px;text-decoration:none}
+  p{margin:0;font-size:15px;line-height:1.6;opacity:.92}
 </style>
 </head>
 <body>
 <img src="icon-192.png" alt="">
-<div>경매 대시보드로 이동 중…</div>
-<a id="go" href="https://houserent-ya8veotkxyx7wdgizq8qom.streamlit.app/?m=1">바로 열기</a>
-<script>setTimeout(function(){ location.replace(document.getElementById('go').href); }, 400);</script>
+<a class="btn" id="go" href="https://houserent-ya8veotkxyx7wdgizq8qom.streamlit.app/?m=1">경매 대시보드 열기</a>
+<p>이 페이지를 홈 화면에 추가해 두면<br>아이콘을 눌렀을 때 바로 대시보드로 이동합니다.</p>
+<script>
+  // 홈 화면 아이콘으로 실행됐을 때만 자동 이동 (브라우저에서 직접 열면 버튼만 표시)
+  var fromHome = location.search.indexOf('go=1') >= 0 || matchMedia('(display-mode: standalone)').matches;
+  if (fromHome) setTimeout(function(){ location.replace(document.getElementById('go').href); }, 300);
+</script>
 </body>
 </html>

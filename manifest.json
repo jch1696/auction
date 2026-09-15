@@ -1,7 +1,7 @@
 {
   "name": "대구 경매 추천",
   "short_name": "경매",
-  "start_url": "./index.html",
+  "start_url": "./index.html?go=1",
   "scope": "./",
   "display": "standalone",
   "background_color": "#c62828",
